@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Main page</title>
+</head>
+<body>
+
+<h1>Welcome to the CRUD Application!</h1>
+<br>
+<form th:action="@{/users}" method="get">
+  <button type="submit">Show all users</button>
+</form>
+</body>
+</html>

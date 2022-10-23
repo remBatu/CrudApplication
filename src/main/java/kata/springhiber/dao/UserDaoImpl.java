@@ -12,13 +12,11 @@ public class UserDaoImpl implements UserDao {
     EntityManager entityManager;
 
     @Override
-    @Transactional(readOnly = true)
     public List<User> getAllUsers() {
         return entityManager.createQuery("from User", User.class).getResultList();
     }
 
     @Override
-    @Transactional
     public void saveUser(User user) {
         entityManager.persist(user);
     }
